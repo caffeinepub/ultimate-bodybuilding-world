@@ -1,0 +1,214 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Luxury premium website for \"Ultimate Bodybuilding World\" (Kalyan’s Biggest & Most Premium 24x7 Fitness Arena) featuring gym + massage/therapy + restaurant/coffee + parking and activities under one brand; English-only site; luxury black/gold/dark marble theme; includes online admission + inquiry flows and SEO-focused structure.",
+  "architectural_notes": [
+    "Website language confirmed: English-only content."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-consistent-luxury-visual-theme-across-the-entire-frontend-royal-black-gold-accents-with-dark-marble-texture-premium-typography-smooth-scrolling-and-refined-hover-transition-effects-suitable-for-a-dubai-luxury-fitness-club-aesthetic",
+      "title": "Create a consistent luxury visual theme across the entire frontend: royal black + gold accents with dark marble texture, premium typography, smooth scrolling, and refined hover/transition effects suitable for a Dubai-luxury fitness club aesthetic.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-full-website-information-architecture-and-navigation-for-these-sections-pages-home-gym-facilities-massage-therapy-restaurant-coffee-extra-premium-facilities-membership-plans-online-admission-inquiry-gallery-contact",
+      "title": "Implement the full website information architecture and navigation for these sections/pages: Home, Gym Facilities, Massage & Therapy, Restaurant & Coffee, Extra Premium Facilities, Membership Plans, Online Admission, Inquiry, Gallery, Contact.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-home-page-with-a-cinematic-hero-area-that-includes-brand-heading-ultimate-bodybuilding-world-tagline-train-recover-refuel-relax-subheading-kalyan-s-largest-fitness-wellness-destination-and-primary-ctas-join-now-book-massage-enquiry-online-admission-include-a-hero-media-area-designed-for-a-full-screen-banner-video-with-graceful-fallback-to-a-poster-image-if-video-is-unavailable",
+      "title": "Build the Home page with a cinematic hero area that includes: brand heading “Ultimate Bodybuilding World”, tagline “Train • Recover • Refuel • Relax”, subheading “Kalyan’s Largest Fitness & Wellness Destination”, and primary CTAs: Join Now, Book Massage, Enquiry, Online Admission; include a hero media area designed for a full-screen banner video with graceful fallback to a poster image if video is unavailable.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-gym-facilities-section-with-the-exact-listed-activities-weight-training-cardio-zone-crossfit-arena-functional-training-kick-boxing-boxing-karate-mma-zumba-skating-steam-bath-ice-bath-recovery-and-display-them-as-luxury-icon-cards-with-a-subtle-gold-glow-animation",
+      "title": "Implement the Gym Facilities section with the exact listed activities (Weight Training, Cardio Zone, Crossfit Arena, Functional Training, Kick Boxing, Boxing, Karate, MMA, Zumba, Skating, Steam Bath, Ice Bath Recovery) and display them as luxury icon cards with a subtle gold-glow animation.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-premium-massage-therapy-page-section-featuring-the-listed-services-signature-massages-head-foot-therapy-dry-cupping-steam-therapy-ice-bath-therapy-luxury-combo-packages-with-a-spa-style-visual-treatment-dark-gold-candle-like-ambiance",
+      "title": "Create the Premium Massage & Therapy page/section featuring the listed services (Signature Massages, Head & Foot Therapy, Dry Cupping, Steam Therapy, Ice Bath Therapy, Luxury Combo Packages) with a spa-style visual treatment (dark + gold, candle-like ambiance).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-restaurant-coffee-page-section-highlighting-the-listed-offerings-healthy-restaurant-protein-meals-diet-food-coffee-lounge-post-workout-refreshments-and-include-a-luxury-caf-style-gallery-layout-suitable-for-seating-food-photography",
+      "title": "Create the Restaurant & Coffee page/section highlighting the listed offerings (Healthy Restaurant, Protein Meals, Diet Food, Coffee Lounge, Post Workout Refreshments) and include a luxury café-style gallery layout suitable for seating/food photography.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-extra-premium-facilities-section-showing-personal-parking-24x7-open-separate-training-zones-professional-trainers-hygienic-environment",
+      "title": "Create the Extra Premium Facilities section showing: Personal Parking, 24x7 Open, Separate Training Zones, Professional Trainers, Hygienic Environment.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-membership-plans-section-using-pricing-cards-including-areas-for-couple-packages-group-sessions-and-steam-session-benefits-highlight",
+      "title": "Implement the Membership Plans section using pricing cards, including areas for Couple Packages, Group Sessions, and Steam Session Benefits highlight.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-online-admission-form-with-fields-name-address-aadhaar-height-weight-medical-history-package-upload-photo-mode-of-payment-on-submit-store-the-submission-in-the-backend-and-provide-an-admin-friendly-way-to-export-download-submissions-as-a-csv-excel-compatible-file",
+      "title": "Build an Online Admission form with fields: Name, Address, Aadhaar, Height/Weight, Medical History, Package, Upload Photo, Mode of Payment; on submit, store the submission in the backend and provide an admin-friendly way to export/download submissions as a CSV (Excel-compatible) file.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-an-inquiry-form-with-fields-name-phone-service-interested-message-on-submit-store-the-inquiry-in-the-backend-and-provide-a-one-click-whatsapp-deep-link-that-pre-fills-a-message-to-the-business-whatsapp-number-for-manual-sending",
+      "title": "Build an Inquiry form with fields: Name, Phone, Service Interested, Message; on submit, store the inquiry in the backend and provide a one-click WhatsApp deep-link that pre-fills a message to the business WhatsApp number for manual sending.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-gallery-section-with-tabs-for-gym-area-crossfit-zone-boxing-ring-mma-training-zumba-class-skating-area-massage-room-ice-bath-restaurant-coffee-lounge-clicking-an-item-opens-a-luxury-styled-image-popup-slider-lightbox",
+      "title": "Implement the Gallery section with tabs for: Gym Area, Crossfit Zone, Boxing Ring, MMA Training, Zumba Class, Skating Area, Massage Room, Ice Bath, Restaurant, Coffee Lounge; clicking an item opens a luxury-styled image popup slider/lightbox.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-contact-page-including-business-address-opp-mayur-vihar-building-birla-college-road-kalyan-w-421301-phone-numbers-gym-91-9870481228-massage-therapy-91-8652320325-an-embedded-google-map-iframe-embed-and-buttons-for-call-now-whatsapp-and-directions",
+      "title": "Create the Contact page including: business address “Opp. Mayur Vihar Building, Birla College Road, Kalyan (W) 421301”, phone numbers (Gym: +91 9870481228; Massage & Therapy: +91 8652320325), an embedded Google Map (iframe embed), and buttons for Call Now, WhatsApp, and Directions.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-set-seo-basics-for-the-frontend-set-the-site-title-to-ultimate-bodybuilding-world-biggest-gym-in-kalyan-24x7-fitness-mma-massage-restaurant-and-include-meta-description-keywords-aligned-to-biggest-gym-in-kalyan-24x7-gym-kalyan-mma-training-in-kalyan-massage-therapy-in-kalyan",
+      "title": "Set SEO basics for the frontend: set the site title to “Ultimate Bodybuilding World – Biggest Gym in Kalyan | 24x7 Fitness, MMA, Massage & Restaurant” and include meta description/keywords aligned to: “Biggest Gym in Kalyan”, “24x7 Gym Kalyan”, “MMA Training in Kalyan”, “Massage Therapy in Kalyan”.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-frontend-admin-view-to-list-online-admissions-and-inquiries-with-search-filter-by-name-phone-date-and-enable-csv-export-for-each-dataset",
+      "title": "Add a frontend admin view to list Online Admissions and Inquiries (with search/filter by name/phone/date) and enable CSV export for each dataset.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-brand-assets-and-wire-them-into-the-ui-a-premium-logo-wordmark-for-ultimate-bodybuilding-world-and-a-set-of-matching-luxury-icons-suitable-for-the-facilities-grid",
+      "title": "Add generated static brand assets and wire them into the UI: a premium logo wordmark for “Ultimate Bodybuilding World” and a set of matching luxury icons suitable for the facilities grid.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-user-facing-way-to-generate-and-share-the-current-page-link-copy-to-clipboard-so-users-can-easily-share-the-live-website-url",
+      "title": "Add a user-facing way to generate and share the current page link (copy-to-clipboard) so users can easily share the live website URL.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create luxury website UI theme (royal black + gold + dark marble), cinematic homepage hero video, smooth scroll, hover effects, premium typography/photography style",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Build full site structure/pages: Home, Gym Facilities, Massage & Therapy, Restaurant & Coffee, Extra Facilities, Membership Plans, Online Admission, Inquiry, Gallery (tabbed with popup slider), Contact (map + call/WhatsApp/directions)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Gym facilities section with listed activities (weights, cardio, crossfit, functional, kickboxing/boxing/karate/MMA, zumba, skating, steam bath, ice bath recovery) and luxury animated gold-glow icons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Premium Massage & Therapy lounge section with signature services and spa-style visuals",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Restaurant & Coffee area section highlighting healthy meals/protein/diet food/coffee lounge with gallery-style presentation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Membership plans section with pricing cards (including couple packages, group sessions, steam benefits highlight)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Online admission form (name, address, Aadhaar, height/weight, medical history, package, photo upload, payment mode) with submission notifications (email + WhatsApp) and Excel record output",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Inquiry system form (name, phone, service interested, message) sending direct WhatsApp notification",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Contact page with Google Map embed and quick action buttons (Call Now, WhatsApp, Directions) plus business address/phones",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "SEO setup: site title/metadata targeting keywords like biggest gym in Kalyan, 24x7 gym Kalyan, MMA training Kalyan, massage therapy Kalyan",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Implement backend data models and APIs (Motoko) to store and retrieve Online Admission submissions and Inquiry submissions, including timestamps and basic status fields (e.g., new/processed) to support simple admin handling.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Ultimate Bodybuilding World",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

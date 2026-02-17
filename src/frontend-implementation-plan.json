@@ -1,0 +1,34 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Shareable Copy Link action in global navigation",
+  "requirements": [
+    {
+      "id": "REQ-17",
+      "summary": "Add a global \"Copy Link\" action that copies the current page URL and shows success/error feedback while preserving the luxury theme and responsive layout.",
+      "acceptanceCriteria": [
+        "A clearly labeled action (e.g., \"Copy Link\") is available in a discoverable global location (header or footer) and works on both desktop and mobile.",
+        "Clicking the action copies window.location.href to the clipboard.",
+        "A success confirmation is shown in English (e.g., \"Link copied\") and an error message is shown if clipboard access fails (e.g., \"Could not copy link\").",
+        "The feature preserves the existing luxury theme (black/gold styling) and does not break layout at common responsive breakpoints."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useCopyPageLink.ts",
+          "operation": "create",
+          "description": "Create a small React hook that attempts to copy window.location.href to the clipboard (prefer navigator.clipboard; include a safe fallback) and returns success/error state for UI messaging."
+        },
+        {
+          "path": "frontend/src/components/layout/CopyLinkButton.tsx",
+          "operation": "create",
+          "description": "Add a reusable \"Copy Link\" button component styled to match the existing black/gold luxury theme, calling the copy hook and rendering an inline success/error confirmation (English) suitable for both desktop and mobile."
+        },
+        {
+          "path": "frontend/src/components/layout/HeaderNav.tsx",
+          "operation": "modify",
+          "description": "Wire the new CopyLinkButton into a discoverable global location in the header: include it in the desktop CTA area and also in the mobile Sheet menu so it remains accessible on small screens without breaking existing layout or navigation."
+        }
+      ]
+    }
+  ]
+}

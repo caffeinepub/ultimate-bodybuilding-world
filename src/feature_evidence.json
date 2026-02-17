@@ -1,0 +1,27 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-user-facing-way-to-generate-and-share-the-current-page-link-copy-to-clipboard-so-users-can-easily-share-the-live-website-url",
+      "featureTitle": "Add a user-facing way to generate and share the current page link (copy-to-clipboard) so users can easily share the live website URL.",
+      "files": [
+        "frontend/src/components/layout/CopyLinkButton.tsx",
+        "frontend/src/components/layout/HeaderNav.tsx",
+        "frontend/src/hooks/useCopyPageLink.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
