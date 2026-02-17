@@ -1,40 +1,71 @@
 {
   "kind": "build_request",
-  "title": "Add shareable link (copy link) for the live website",
+  "title": "Integrate Google Business Profile link and strengthen local SEO signals",
   "projectName": "Ultimate Bodybuilding World",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-17",
-      "text": "Add a user-facing way to generate and share the current page link (copy-to-clipboard) so users can easily share the live website URL.",
+      "id": "REQ-33",
+      "text": "Add the provided Google Business Profile link (https://share.google/HVERLwHNGUKinPVi1) as a visible, user-accessible link on the site, using English-only label text and matching the existing luxury styling.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-3"
+          "recent-messages-5"
         ],
         "quotes": [
-          "isnka link bana kar do na"
+          "https://share.google/HVERLwHNGUKinPVi1"
         ]
       },
       "acceptanceCriteria": [
-        "A clearly labeled action (e.g., \"Copy Link\") is available in a discoverable global location (header or footer) and works on both desktop and mobile.",
-        "Clicking the action copies window.location.href to the clipboard.",
-        "A success confirmation is shown in English (e.g., \"Link copied\") and an error message is shown if clipboard access fails (e.g., \"Could not copy link\").",
-        "The feature preserves the existing luxury theme (black/gold styling) and does not break layout at common responsive breakpoints."
+        "The Footer includes a clearly labeled link (English text) that opens https://share.google/HVERLwHNGUKinPVi1 in a new tab with rel=\"noopener noreferrer\".",
+        "The Contact page includes a clearly labeled link (English text) that opens https://share.google/HVERLwHNGUKinPVi1 in a new tab with rel=\"noopener noreferrer\".",
+        "The new link styling is consistent with the existing black/gold luxury theme and does not introduce placeholder social links (e.g., \"#\") for this GBP link."
+      ]
+    },
+    {
+      "id": "REQ-34",
+      "text": "Add LocalBusiness structured data (JSON-LD) to the HTML head that reflects the site’s NAP details and includes the provided Google Business Profile URL as an external reference.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages-5"
+        ],
+        "quotes": [
+          "https://share.google/HVERLwHNGUKinPVi1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "frontend/index.html includes a JSON-LD <script type=\"application/ld+json\"> block describing the business as a LocalBusiness (or SportsActivityLocation/HealthClub) with name \"Ultimate Bodybuilding World\".",
+        "The JSON-LD includes the existing on-site address \"Opp. Mayur Vihar Building, Birla College Road, Kalyan (W) 421301\" and the published phone number currently used in the app (from frontend/src/constants/contact.ts).",
+        "The JSON-LD includes the provided Google Business Profile URL https://share.google/HVERLwHNGUKinPVi1 (e.g., via sameAs or a suitable URL field).",
+        "No user-facing text is changed to non-English as part of adding structured data."
       ]
     }
   ],
   "constraints": [
-    "Use English for any user-facing text.",
-    "Do not edit frontend immutable paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
-    "Frontend must remain React + TypeScript + Tailwind + React Query with existing TanStack Router routing."
+    "Do not modify any files under frontend/src/components/ui (read-only).",
+    "Do not edit immutable hook files: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx.",
+    "Backend must remain a single Motoko actor; no new backend services or external databases."
   ],
   "nonGoals": [
-    "Do not implement or promise a new deployment/hosting URL generation feature.",
-    "Do not add URL shortener integrations or external sharing APIs."
+    "Guaranteeing #1 Google ranking (SEO results depend on Google indexing, competition, and Google Business Profile factors outside the website).",
+    "Adding paid ads/Google Ads campaign setup.",
+    "Integrating third-party analytics or marketing pixels."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [
+      "Use English-only user-facing text."
+    ],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

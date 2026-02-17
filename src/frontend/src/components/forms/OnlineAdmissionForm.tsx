@@ -210,11 +210,9 @@ export default function OnlineAdmissionForm({ onSuccess }: OnlineAdmissionFormPr
                 <SelectValue placeholder="Choose a membership package" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Basic">Basic - ₹2,999/month</SelectItem>
-                <SelectItem value="Premium">Premium - ₹4,999/month</SelectItem>
-                <SelectItem value="Elite">Elite - ₹7,999/month</SelectItem>
-                <SelectItem value="Couple Basic">Couple Basic - ₹5,499/month</SelectItem>
-                <SelectItem value="Couple Premium">Couple Premium - ₹8,999/month</SelectItem>
+                <SelectItem value="1 Month">1 Month - ₹3,999</SelectItem>
+                <SelectItem value="3 Months">3 Months - ₹10,999</SelectItem>
+                <SelectItem value="1 Year">1 Year - ₹39,999</SelectItem>
               </SelectContent>
             </Select>
             {errors.packageSelected && <p className="text-destructive text-sm mt-1">{errors.packageSelected.message}</p>}

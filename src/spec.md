@@ -1,11 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Add a simple, user-facing “Copy Link” action so users can copy and share the current page URL.
+**Goal:** Make the Google Business Profile link easy to find and strengthen local SEO by adding LocalBusiness structured data.
 
 **Planned changes:**
-- Add a globally discoverable “Copy Link” control in the header or footer that works on desktop and mobile.
-- Implement copy-to-clipboard behavior that copies `window.location.href`.
-- Show an English success confirmation (“Link copied”) and an error message if copying fails (“Could not copy link”), styled to match the existing black/gold luxury theme without breaking responsive layout.
+- Add a visible, English-labeled Google Business Profile link in the site Footer that opens in a new tab with `rel="noopener noreferrer"` and matches the existing black/gold luxury styling.
+- Add a visible, English-labeled Google Business Profile link on the Contact page that opens in a new tab with `rel="noopener noreferrer"` and matches the existing black/gold luxury styling.
+- Add LocalBusiness (or SportsActivityLocation/HealthClub) JSON-LD structured data in `frontend/index.html` including the business name, on-site address, the published phone number from `frontend/src/constants/contact.ts`, and the provided Google Business Profile URL.
 
-**User-visible outcome:** Users can tap/click “Copy Link” to copy the current page link and share it, with clear success/error feedback.
+**User-visible outcome:** Visitors can click a clearly labeled Google Business Profile link from the Footer and Contact page, and the site includes LocalBusiness structured data referencing the same profile for improved local SEO signals.

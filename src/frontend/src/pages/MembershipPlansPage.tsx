@@ -3,58 +3,46 @@ import { Check } from 'lucide-react';
 
 const plans = [
   {
-    name: 'Basic',
-    price: '₹2,999',
+    name: '1 Month',
+    price: '₹3,999',
     period: 'per month',
     features: [
-      'Gym Access',
-      'Cardio Zone',
+      'Full Gym Access',
+      'Cardio & Weight Training',
       'Locker Facility',
       'Basic Training Support',
+      'Group Classes',
     ],
     popular: false,
   },
   {
-    name: 'Premium',
-    price: '₹4,999',
-    period: 'per month',
+    name: '3 Months',
+    price: '₹10,999',
+    period: 'for 3 months',
     features: [
-      'All Basic Features',
-      'Crossfit Arena',
-      'Group Classes',
-      'Personal Trainer (2 sessions/week)',
+      'All 1 Month Features',
+      'Crossfit Arena Access',
+      'Personal Trainer Sessions',
       'Steam Bath Access',
+      'Diet Consultation',
+      'Priority Booking',
     ],
     popular: true,
   },
   {
-    name: 'Elite',
-    price: '₹7,999',
-    period: 'per month',
+    name: '1 Year',
+    price: '₹39,999',
+    period: 'per year',
     features: [
-      'All Premium Features',
+      'All 3 Months Features',
       'MMA & Boxing Training',
       'Unlimited Personal Training',
-      'Massage Therapy (2 sessions/month)',
-      'Diet Consultation',
+      'Massage Therapy Sessions',
       'Ice Bath Recovery',
+      'Premium Locker',
+      'Guest Passes (2/month)',
     ],
     popular: false,
-  },
-];
-
-const couplePackages = [
-  {
-    name: 'Couple Basic',
-    price: '₹5,499',
-    period: 'per month',
-    features: ['2 Basic Memberships', '10% Discount', 'Shared Locker'],
-  },
-  {
-    name: 'Couple Premium',
-    price: '₹8,999',
-    period: 'per month',
-    features: ['2 Premium Memberships', '15% Discount', 'Priority Booking'],
   },
 ];
 
@@ -83,18 +71,6 @@ export default function MembershipPlansPage() {
           {plans.map((plan) => (
             <PricingCard key={plan.name} {...plan} />
           ))}
-        </div>
-
-        {/* Couple Packages */}
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-luxury font-bold text-gold text-center mb-12">
-            Couple Packages
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {couplePackages.map((pkg) => (
-              <PricingCard key={pkg.name} {...pkg} popular={false} />
-            ))}
-          </div>
         </div>
 
         {/* Group Sessions */}

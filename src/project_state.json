@@ -1,11 +1,16 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
+  "projectStateVersion": 21,
   "summary": "Luxury premium website for \"Ultimate Bodybuilding World\" (Kalyan’s Biggest & Most Premium 24x7 Fitness Arena) featuring gym + massage/therapy + restaurant/coffee + parking and activities under one brand; English-only site; luxury black/gold/dark marble theme; includes online admission + inquiry flows and SEO-focused structure.",
   "architectural_notes": [
-    "Website language confirmed: English-only content."
+    "Website language confirmed: English-only content.",
+    "User provided Google Business Profile share link for UBW: https://share.google/HVERLwHNGUKinPVi1 (use for local SEO/GBP optimization alignment)."
   ],
-  "known_issues": [],
+  "known_issues": [
+    "Non-approved phone number 966568306523 is still present somewhere on the site; user requested it be removed (keep 9870481228).",
+    "User indicates the wrong logo/photo was used; need to add and use the exact logo image the user provided (verify correct asset and replace current logo accordingly).",
+    "User requests removing phone number +91 9870481228 from the site (all visible text and tel:/WhatsApp links), which conflicts with earlier requirement to keep it; needs confirmation of the correct final phone numbers to publish."
+  ],
   "isFixRequest": false,
   "existing_features": [
     {
@@ -135,6 +140,134 @@
         "REQ-17"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-any-non-india-dubai-phone-number-s-from-the-site-and-ensure-the-only-published-phone-numbers-are-gym-91-9870481228-and-massage-therapy-91-86523-20325-including-all-visible-text-and-all-tel-whatsapp-deep-links",
+      "title": "Remove any non-India/Dubai phone number(s) from the site and ensure the only published phone numbers are Gym: +91 9870481228 and Massage & Therapy: +91 86523 20325 (including all visible text and all tel:/WhatsApp deep links).",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-instagram-profile-link-https-www-instagram-com-ultimatebodybuildingworld-igsh-mxdpztg1eg5rctzuaq-to-the-site-s-social-links-at-minimum-in-the-footer-instagram-icon-using-the-existing-luxury-styling-and-opening-in-a-new-tab",
+      "title": "Add the Instagram profile link https://www.instagram.com/ultimatebodybuildingworld?igsh=MXdpZTg1eG5rcTZuaQ== to the site's social links (at minimum in the footer Instagram icon), using the existing luxury styling and opening in a new tab.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-membership-plans-offerings-to-include-exactly-three-duration-packages-1-month-3-months-and-1-year-using-the-exact-plan-names-prices-details-from-the-previously-shared-pamphlet-and-update-the-online-admission-form-select-package-dropdown-to-match-the-same-three-options",
+      "title": "Update the Membership Plans offerings to include exactly three duration packages: 1 month, 3 months, and 1 year (using the exact plan names/prices/details from the previously shared pamphlet), and update the Online Admission form 'Select Package' dropdown to match the same three options.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-phone-number-966568306523-from-the-website-entirely-all-visible-text-and-any-tel-whatsapp-links-and-ensure-the-only-published-phone-numbers-remain-gym-91-9870481228-and-massage-therapy-91-8652320325",
+      "title": "Remove the phone number \"966568306523\" from the website entirely (all visible text and any tel:/WhatsApp links), and ensure the only published phone numbers remain Gym: +91 9870481228 and Massage & Therapy: +91 8652320325.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-user-provided-ultimate-bodybuilding-world-logo-as-a-static-frontend-asset-and-use-it-as-the-primary-site-logo",
+      "title": "Add the user-provided “Ultimate Bodybuilding World” logo as a static frontend asset and use it as the primary site logo.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-currently-used-logo-image-in-the-header-navigation-with-the-user-provided-logo-removing-the-existing-logo-reference-assets-generated-logo-ubw-wordmark-dim-1600x400-png",
+      "title": "Replace the currently used logo image in the header navigation with the user-provided logo, removing the existing logo reference (/assets/generated/logo-ubw-wordmark.dim_1600x400.png).",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-home-page-hero-branding-to-use-the-user-provided-logo-in-place-of-the-current-large-text-only-brand-heading-while-keeping-the-existing-tagline-subheading-and-cta-buttons-unchanged",
+      "title": "Update the Home page hero branding to use the user-provided logo in place of the current large text-only brand heading, while keeping the existing tagline, subheading, and CTA buttons unchanged.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-user-provided-logo-is-the-only-logo-wordmark-used-across-the-entire-frontend-and-remove-any-remaining-references-to-older-placeholder-logos-including-the-previously-generated-wordmark-asset",
+      "title": "Ensure the user-provided logo is the only logo/wordmark used across the entire frontend, and remove any remaining references to older/placeholder logos (including the previously generated wordmark asset).",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-exact-logo-image-that-the-user-provided-the-specific-photo-the-user-shared-as-a-static-frontend-asset-and-set-it-as-the-primary-site-logo",
+      "title": "Add the exact logo image that the user provided (the specific photo the user shared) as a static frontend asset and set it as the primary site logo.",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-centralized-branding-configuration-to-reference-the-newly-added-user-provided-logo-asset-path-and-ensure-all-logo-usages-read-from-this-single-branding-source-of-truth",
+      "title": "Update the centralized branding configuration to reference the newly added user-provided logo asset path, and ensure all logo usages read from this single branding source of truth.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-or-replace-any-remaining-references-to-older-incorrect-logo-assets-so-the-user-provided-logo-photo-is-the-only-logo-wordmark-used-across-the-entire-frontend",
+      "title": "Remove or replace any remaining references to older/incorrect logo assets so the user-provided logo photo is the only logo/wordmark used across the entire frontend.",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-phone-number-91-9870481228-including-any-normalized-variants-like-919870481228-and-919870481228-from-the-entire-frontend-so-it-is-not-shown-anywhere-and-is-not-used-in-any-tel-or-whatsapp-deep-links",
+      "title": "Remove the phone number +91 9870481228 (including any normalized variants like +919870481228 and 919870481228) from the entire frontend so it is not shown anywhere and is not used in any tel: or WhatsApp deep links.",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-centralized-contact-configuration-frontend-src-constants-contact-ts-to-remove-the-gym-phone-entry-for-91-9870481228-and-adjust-helper-functions-types-so-the-rest-of-the-app-compiles-and-uses-only-the-remaining-published-contact-number-s",
+      "title": "Update the centralized contact configuration (frontend/src/constants/contact.ts) to remove the gym phone entry for +91 9870481228 and adjust helper functions/types so the rest of the app compiles and uses only the remaining published contact number(s).",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-all-ui-call-to-action-buttons-links-that-currently-use-the-removed-gym-contact-e-g-header-call-call-now-buttons-and-contact-page-call-now-whatsapp-buttons-so-they-do-not-reference-91-9870481228-and-instead-use-the-remaining-contact-number-s-consistently",
+      "title": "Update all UI call-to-action buttons/links that currently use the removed gym contact (e.g., header “Call/Call Now” buttons and Contact page “Call Now/WhatsApp” buttons) so they do not reference +91 9870481228 and instead use the remaining contact number(s) consistently.",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-provided-google-business-profile-link-https-share-google-hverlwhngukinpvi1-as-a-visible-user-accessible-link-on-the-site-using-english-only-label-text-and-matching-the-existing-luxury-styling",
+      "title": "Add the provided Google Business Profile link (https://share.google/HVERLwHNGUKinPVi1) as a visible, user-accessible link on the site, using English-only label text and matching the existing luxury styling.",
+      "reqIds": [
+        "REQ-33"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-localbusiness-structured-data-json-ld-to-the-html-head-that-reflects-the-site-s-nap-details-and-includes-the-provided-google-business-profile-url-as-an-external-reference",
+      "title": "Add LocalBusiness structured data (JSON-LD) to the HTML head that reflects the site’s NAP details and includes the provided Google Business Profile URL as an external reference.",
+      "reqIds": [
+        "REQ-34"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -204,6 +337,44 @@
       "reqIds": [
         "REQ-14"
       ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Update Contact details: add/keep phone +91 86523 20325, remove the other (Dubai) phone number, and add Instagram link https://www.instagram.com/ultimatebodybuildingworld?igsh=MXdpZTg1eG5rcTZuaQ==",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Update Membership Plans to include 3 packages: 1 month, 3 months, and 1 year (as per the pamphlet previously shared)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Replace the current Home page logo with the user-provided “Ultimate Bodybuilding World” logo; remove the existing logo currently used on the homepage.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Remove the phone number \"966568306523\" from the website entirely (all visible text and any tel:/WhatsApp deep links), including any occurrence on the Home (main) page, and ensure the only published phone numbers remain Gym: +91 9870481228 and Massage & Therapy: +91 8652320325.",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-29",
+      "summary": "Remove the phone number +91 9870481228 from the website (all visible text and any tel:/WhatsApp deep links) and update published contact details accordingly.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-30",
+      "summary": "Improve Google search visibility via Local SEO + Google Business Profile (GBP) optimization using provided GBP link (ensure NAP consistency, local keyword targeting for Kalyan West, and tie site SEO to GBP)",
+      "reqIds": [],
       "status": "pending"
     }
   ],

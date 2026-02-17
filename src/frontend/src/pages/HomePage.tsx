@@ -2,6 +2,7 @@ import { useNavigate } from '@tanstack/react-router';
 import { Button } from '@/components/ui/button';
 import { Dumbbell, Sparkles, Coffee, Calendar } from 'lucide-react';
 import HeroMedia from '@/components/home/HeroMedia';
+import { BRANDING } from '@/constants/branding';
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -13,9 +14,12 @@ export default function HomePage() {
         <HeroMedia />
         
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-luxury font-bold mb-6 heading-luxury animate-fade-in">
-            Ultimate Bodybuilding World
-          </h1>
+          <h1 className="sr-only">{BRANDING.logo.alt}</h1>
+          <img 
+            src={BRANDING.logo.path}
+            alt={BRANDING.logo.alt}
+            className="mx-auto mb-6 w-full max-w-2xl md:max-w-3xl lg:max-w-4xl h-auto object-contain animate-fade-in drop-shadow-[0_0_20px_rgba(212,175,55,0.5)]"
+          />
           <p className="text-xl md:text-2xl lg:text-3xl text-gold font-semibold mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Train • Recover • Refuel • Relax
           </p>

@@ -2,12 +2,12 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-a-user-facing-way-to-generate-and-share-the-current-page-link-copy-to-clipboard-so-users-can-easily-share-the-live-website-url",
-      "featureTitle": "Add a user-facing way to generate and share the current page link (copy-to-clipboard) so users can easily share the live website URL.",
+      "featureId": "feature-add-the-provided-google-business-profile-link-https-share-google-hverlwhngukinpvi1-as-a-visible-user-accessible-link-on-the-site-using-english-only-label-text-and-matching-the-existing-luxury-styling",
+      "featureTitle": "Add the provided Google Business Profile link (https://share.google/HVERLwHNGUKinPVi1) as a visible, user-accessible link on the site, using English-only label text and matching the existing luxury styling.",
       "files": [
-        "frontend/src/components/layout/CopyLinkButton.tsx",
-        "frontend/src/components/layout/HeaderNav.tsx",
-        "frontend/src/hooks/useCopyPageLink.ts"
+        "frontend/src/components/layout/Footer.tsx",
+        "frontend/src/constants/googleBusinessProfile.ts",
+        "frontend/src/pages/ContactPage.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -19,7 +19,27 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-17"
+        "REQ-33"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-localbusiness-structured-data-json-ld-to-the-html-head-that-reflects-the-site-s-nap-details-and-includes-the-provided-google-business-profile-url-as-an-external-reference",
+      "featureTitle": "Add LocalBusiness structured data (JSON-LD) to the HTML head that reflects the site’s NAP details and includes the provided Google Business Profile URL as an external reference.",
+      "files": [
+        "frontend/index.html"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-34"
       ],
       "confidence": "high"
     }

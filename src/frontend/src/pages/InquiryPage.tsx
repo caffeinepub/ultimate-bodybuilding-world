@@ -3,6 +3,7 @@ import InquiryForm from '@/components/forms/InquiryForm';
 import { CheckCircle, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from '@tanstack/react-router';
+import { getWhatsAppLink } from '@/constants/contact';
 
 interface SubmittedData {
   name: string;
@@ -25,8 +26,7 @@ export default function InquiryPage() {
     if (!submittedData) return '#';
     
     const message = `Hello! I'm ${submittedData.name}.\n\nService Interested: ${submittedData.serviceInterested}\n\nMessage: ${submittedData.message}\n\nPhone: ${submittedData.phone}`;
-    const encodedMessage = encodeURIComponent(message);
-    return `https://wa.me/919870481228?text=${encodedMessage}`;
+    return getWhatsAppLink('massage', message);
   };
 
   if (submitted && submittedData) {
@@ -67,10 +67,10 @@ export default function InquiryPage() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-luxury font-bold heading-luxury mb-4">
-            Inquiry
+            Make an Inquiry
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have questions? We're here to help. Fill out the form below and we'll get back to you shortly.
+            Have questions? Fill out the form below and we'll get back to you as soon as possible.
           </p>
         </div>
 

@@ -4,6 +4,8 @@ import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import CopyLinkButton from './CopyLinkButton';
+import { getTelLink } from '@/constants/contact';
+import { BRANDING } from '@/constants/branding';
 
 export default function HeaderNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +28,9 @@ export default function HeaderNav() {
           {/* Logo */}
           <Link to="/" className="flex items-center transition-opacity hover:opacity-80">
             <img 
-              src="/assets/generated/logo-ubw-wordmark.dim_1600x400.png" 
-              alt="Ultimate Bodybuilding World" 
-              className="h-12 w-auto"
+              src={BRANDING.logo.path}
+              alt={BRANDING.logo.alt}
+              className="h-12 w-auto max-w-[200px] md:max-w-[280px] object-contain"
             />
           </Link>
 
@@ -63,7 +65,7 @@ export default function HeaderNav() {
             >
               Join Now
             </Button>
-            <a href="tel:+919870481228" className="ml-2">
+            <a href={getTelLink('massage')} className="ml-2">
               <Button size="sm" variant="ghost" className="text-gold">
                 <Phone className="h-4 w-4 mr-2" />
                 Call
@@ -114,7 +116,7 @@ export default function HeaderNav() {
                   >
                     Join Now
                   </Button>
-                  <a href="tel:+919870481228" className="w-full">
+                  <a href={getTelLink('massage')} className="w-full">
                     <Button variant="ghost" className="text-gold w-full">
                       <Phone className="h-4 w-4 mr-2" />
                       Call Now

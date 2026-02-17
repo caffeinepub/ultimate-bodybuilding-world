@@ -1,32 +1,48 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Shareable Copy Link action in global navigation",
+  "title": "Integrate Google Business Profile link and LocalBusiness JSON-LD for Ultimate Bodybuilding World",
   "requirements": [
     {
-      "id": "REQ-17",
-      "summary": "Add a global \"Copy Link\" action that copies the current page URL and shows success/error feedback while preserving the luxury theme and responsive layout.",
+      "id": "REQ-33",
+      "summary": "Add a visible Google Business Profile link in the Footer and Contact page using English-only labeling and existing luxury black/gold styling.",
       "acceptanceCriteria": [
-        "A clearly labeled action (e.g., \"Copy Link\") is available in a discoverable global location (header or footer) and works on both desktop and mobile.",
-        "Clicking the action copies window.location.href to the clipboard.",
-        "A success confirmation is shown in English (e.g., \"Link copied\") and an error message is shown if clipboard access fails (e.g., \"Could not copy link\").",
-        "The feature preserves the existing luxury theme (black/gold styling) and does not break layout at common responsive breakpoints."
+        "The Footer includes a clearly labeled link (English text) that opens https://share.google/HVERLwHNGUKinPVi1 in a new tab with rel=\"noopener noreferrer\".",
+        "The Contact page includes a clearly labeled link (English text) that opens https://share.google/HVERLwHNGUKinPVi1 in a new tab with rel=\"noopener noreferrer\".",
+        "The new link styling is consistent with the existing black/gold luxury theme and does not introduce placeholder social links (e.g., \"#\") for this GBP link."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/hooks/useCopyPageLink.ts",
+          "path": "frontend/src/constants/googleBusinessProfile.ts",
           "operation": "create",
-          "description": "Create a small React hook that attempts to copy window.location.href to the clipboard (prefer navigator.clipboard; include a safe fallback) and returns success/error state for UI messaging."
+          "description": "Create a small constants module exporting the Google Business Profile URL (https://share.google/HVERLwHNGUKinPVi1) and an English-only label to ensure consistent reuse across Footer and Contact page."
         },
         {
-          "path": "frontend/src/components/layout/CopyLinkButton.tsx",
-          "operation": "create",
-          "description": "Add a reusable \"Copy Link\" button component styled to match the existing black/gold luxury theme, calling the copy hook and rendering an inline success/error confirmation (English) suitable for both desktop and mobile."
-        },
-        {
-          "path": "frontend/src/components/layout/HeaderNav.tsx",
+          "path": "frontend/src/components/layout/Footer.tsx",
           "operation": "modify",
-          "description": "Wire the new CopyLinkButton into a discoverable global location in the header: include it in the desktop CTA area and also in the mobile Sheet menu so it remains accessible on small screens without breaking existing layout or navigation."
+          "description": "Add a new, clearly labeled Google Business Profile external link using the shared constant; ensure it opens in a new tab and includes rel=\"noopener noreferrer\"; apply existing luxury theme classes consistent with current footer link styling."
+        },
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "modify",
+          "description": "Add a clearly labeled Google Business Profile external link (English-only text) in the Contact page UI (e.g., alongside existing action buttons or within contact info cards); ensure target=\"_blank\" and rel=\"noopener noreferrer\" and match the existing black/gold luxury styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-34",
+      "summary": "Add LocalBusiness structured data (JSON-LD) in the HTML head with NAP details and the Google Business Profile URL reference.",
+      "acceptanceCriteria": [
+        "frontend/index.html includes a JSON-LD <script type=\"application/ld+json\"> block describing the business as a LocalBusiness (or SportsActivityLocation/HealthClub) with name \"Ultimate Bodybuilding World\".",
+        "The JSON-LD includes the existing on-site address \"Opp. Mayur Vihar Building, Birla College Road, Kalyan (W) 421301\" and the published phone number currently used in the app (from frontend/src/constants/contact.ts).",
+        "The JSON-LD includes the provided Google Business Profile URL https://share.google/HVERLwHNGUKinPVi1 (e.g., via sameAs or a suitable URL field).",
+        "No user-facing text is changed to non-English as part of adding structured data."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Insert a <script type=\"application/ld+json\"> JSON-LD block in <head> describing \"Ultimate Bodybuilding World\" as LocalBusiness (or SportsActivityLocation/HealthClub), including address \"Opp. Mayur Vihar Building, Birla College Road, Kalyan (W) 421301\", phone number matching frontend/src/constants/contact.ts, and sameAs (or equivalent) referencing https://share.google/HVERLwHNGUKinPVi1; ensure this change does not alter any user-facing language."
         }
       ]
     }

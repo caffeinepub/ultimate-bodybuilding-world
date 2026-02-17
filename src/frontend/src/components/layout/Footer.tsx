@@ -1,6 +1,8 @@
 import { Link } from '@tanstack/react-router';
-import { SiFacebook, SiInstagram, SiX } from 'react-icons/si';
-import { Heart, Phone, Mail, MapPin } from 'lucide-react';
+import { SiFacebook, SiInstagram, SiX, SiGoogle } from 'react-icons/si';
+import { Heart, Phone, MapPin } from 'lucide-react';
+import { getTelLink, getDisplayNumber } from '@/constants/contact';
+import { GOOGLE_BUSINESS_PROFILE } from '@/constants/googleBusinessProfile';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,11 +22,25 @@ export default function Footer() {
               <a href="#" className="text-muted-foreground hover:text-gold transition-colors">
                 <SiFacebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-gold transition-colors">
+              <a 
+                href="https://www.instagram.com/ultimatebodybuildingworld?igsh=MXdpZTg1eG5rcTZuaQ==" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-muted-foreground hover:text-gold transition-colors"
+              >
                 <SiInstagram className="h-5 w-5" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-gold transition-colors">
                 <SiX className="h-5 w-5" />
+              </a>
+              <a 
+                href={GOOGLE_BUSINESS_PROFILE.url}
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-muted-foreground hover:text-gold transition-colors"
+                title={GOOGLE_BUSINESS_PROFILE.label}
+              >
+                <SiGoogle className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -61,11 +77,9 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-gold flex-shrink-0" />
-                <a href="tel:+919870481228" className="text-muted-foreground hover:text-gold transition-colors">+91 9870481228</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-gold flex-shrink-0" />
-                <a href="tel:+918652320325" className="text-muted-foreground hover:text-gold transition-colors">+91 8652320325</a>
+                <a href={getTelLink('massage')} className="text-muted-foreground hover:text-gold transition-colors">
+                  {getDisplayNumber('massage')}
+                </a>
               </li>
             </ul>
           </div>

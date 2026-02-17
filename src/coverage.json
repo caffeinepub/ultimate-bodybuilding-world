@@ -1,41 +1,52 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-17T03:35:29.322Z",
+  "generatedAt": "2026-02-17T05:12:03.790Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 1,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-17",
-        "summary": "Add a user-facing way to generate and share the current page link (copy-to-clipboard) so users can easily share the live website URL.",
+        "id": "REQ-33",
+        "summary": "Add the provided Google Business Profile link (https://share.google/HVERLwHNGUKinPVi1) as a visible, user-accessible link on the site, using English-only label text and matching the existing luxury styling.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/hooks/useCopyPageLink.ts",
-          "frontend/src/components/layout/CopyLinkButton.tsx",
-          "frontend/src/components/layout/HeaderNav.tsx"
+          "frontend/src/constants/googleBusinessProfile.ts",
+          "frontend/src/components/layout/Footer.tsx",
+          "frontend/src/pages/ContactPage.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/hooks/useCopyPageLink.ts",
-          "frontend/src/components/layout/CopyLinkButton.tsx",
-          "frontend/src/components/layout/HeaderNav.tsx"
+          "frontend/src/constants/googleBusinessProfile.ts",
+          "frontend/src/components/layout/Footer.tsx",
+          "frontend/src/pages/ContactPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-34",
+        "summary": "Add LocalBusiness structured data (JSON-LD) to the HTML head that reflects the site’s NAP details and includes the provided Google Business Profile URL as an external reference.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/index.html"
+        ],
+        "matchedFiles": [
+          "frontend/index.html"
         ]
       }
     ]
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/layout/CopyLinkButton.tsx",
-    "frontend/src/components/layout/HeaderNav.tsx",
-    "frontend/src/hooks/useCopyPageLink.ts",
+    "frontend/index.html",
+    "frontend/src/components/layout/Footer.tsx",
+    "frontend/src/constants/googleBusinessProfile.ts",
+    "frontend/src/pages/ContactPage.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",
